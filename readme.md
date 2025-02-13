@@ -62,19 +62,23 @@ Pro zajímavost se ještě podívejte na zkratky:
 
 ### 2. Rozdělení řídících jednotek z hlediska odolnosti a robustnosti
 
-1. Odolnost řídících jednotek můžeme hodnotit jednak z hlediska mechanických vlastností a jednak z hlediska funkčnosti a stability vykonávání zadaných úloh (zpracování programu). S tím souvisí i pojem robustnost řízení. Zjistěte, co tento pojem znamená.
+1. Odolnost řídících jednotek můžeme hodnotit jednak z hlediska mechanických vlastností a jednak z hlediska funkčnosti a stability vykonávání zadaných úloh (zpracování programu). S tím souvisí i pojem robustnost. Zjistěte, co tento pojem znamená.
 
-2. 
+2. Jakými způsoby lze zajistit vyšší odolnost řídících jednotek proti prachu, vodě, chemikáliím a vybracím?
 
+3. Co je to IP68?
+
+4. Jakou hodnotu musí minimálně mít zařízení pro montáž ven pod střechu?
 
 5. Jak se ve výše diskutovaných požadavcích liší od sebe výpočetní technika pro běžné uživatele, řídící jednotky pro průmysl, zdravotnictví a armádu?
 
 
 
 
-
+<!--
 
 > :key: **xxxx**
 >
 > xxxx
 
+-->
