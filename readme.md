@@ -3,6 +3,8 @@
 
 # Výběr řídící jednotky pro různé aplikace
 
+# TEST
+
 $${\color{#FFA500}E9 \space \color{#4682B4}A6 }$$
 
 ## Cíl
@@ -33,6 +35,10 @@ Výběr řídící jednotky pro různé aplikace
 -   iPC
 -   NC (Numerical Control)
 -   programovatelná relé
+
+> :key: **Porovnání MCU pro bastlíře**
+>
+> Bastlířské platformy pro sběr dat - Petr Zelenka - Čtvrtkon 121. Online. In: MÜLLER, Jan. Tygři na cestě, 2025. Dostupné z: <a href="https://youtu.be/TkkWsrefH8A?feature=shared">https://youtu.be/TkkWsrefH8A?feature=shared</a>. [cit. 2025-04-24].
 
 Pro zajímavost se ještě podívejte na zkratky:
 -   SoC - System on a chip
