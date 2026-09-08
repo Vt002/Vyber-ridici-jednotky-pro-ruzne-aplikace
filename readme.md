@@ -1,9 +1,7 @@
 [Co dodělat ]: #
 [pojmy ]: #
 
-# Výběr řídící jednotky pro různé aplikace
-
-# TEST2
+# Výběr řídící jednotky pro různé aplikace  AAA
 
 $${\color{#FFA500}E9 \space \color{#4682B4}A6 }$$
 
