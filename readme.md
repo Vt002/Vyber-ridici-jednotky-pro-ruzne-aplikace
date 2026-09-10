@@ -3,7 +3,7 @@
 
 # Výběr řídící jednotky pro různé aplikace
 
-$${\color{#FFA500}E9 \space \color{#4682B4}A6 }$$
+$${\color{#FFA500}E9 \space \color{#4682B4}A1 }$$
 
 ## Cíl
 
