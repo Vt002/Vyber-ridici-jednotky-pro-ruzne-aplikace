@@ -3,14 +3,15 @@
 
 # Výběr řídící jednotky pro různé aplikace
 
+
 $${\color{#FFA500}E9 \space \color{#4682B4}A1 }$$
 
-## Cíl
+## Cíle
 
--   Studenti budou mít základní přehled o nejčastěji používaných řídících jednotkách,
--   a jejich vlastnostech (parametrech). Především z pohledu výpočetního výkonu a paměťového prostoru.
--   Dále pak z pohledu odolnosti a robustnosti hardwaru i softwaru.
--   A ke každému druhu řídících jednotek uvedou příklady z praxe.
+- **Orientovat se** v základních typech a architekturách řídicích jednotek (MCU, MPU, embedded systémy, PLC, iPC, programovatelná relé).
+- **Rozlišovat klíčové technické parametry** (výpočetní výkon vs. spotřeba, typy a velikosti pamětí RAM/Flash/EEPROM, determinismus a reakční doba v reálném čase).
+- **Zhodnotit provozní odolnost a robustnost** hardwaru (krytí IP, teplotní rozsah, vibrace, rušení EMC, srovnání spotřební vs. průmyslové techniky).
+- **Navrhnout a technicko-ekonomicky obhájit** optimální řídicí jednotku pro konkrétní praktickou aplikaci podle I/O bilance, rozhraní a prostředí.
 
 ## Ověření cílů
 
@@ -21,66 +22,68 @@ Výběr řídící jednotky pro různé aplikace
 3. A z hlediska odolnosti
 4. Příklady použití v praxi (kde se používají MCU, a kde ř. j. s MPU)
 
+%%
+1. Správné vysvětlení pojmů, architektur a zkratek z oblasti řídicích systémů.
+2. Schopnost posoudit vliv prostředí na výběr hardwaru a dešifrovat IP kód.
+3. Vypracování rozhodovací matice pro volbu vhodné platformy (MCU vs. PLC vs. iPC).
+4. Návrh konkrétní konfigurace řídicí jednotky na základě zadané I/O bilance a provozních podmínek.
+5. Kritická technická oponentura (audit) nevhodně navrženého řešení.
+%%
+
+
+---
+
 ## Úlohy
 
-### 1. Typy řídících jednotek a jejich základní vlastnosti (parametry)
 
-1. Zjistěte, jaké řídící jednotky se skrývají pod následujícími zkratkami a k čemu se používají (v jakých aplikacích se s nimi lze setkat):
--   MCU
--   MPU
--   embedded
--   PLC
--   iPC
--   NC (Numerical Control)
--   programovatelná relé
+### 1. Základní pojmy a architektury řídicích jednotek
 
-> :key: **Porovnání MCU pro bastlíře**
->
-> Bastlířské platformy pro sběr dat - Petr Zelenka - Čtvrtkon 121. Online. In: MÜLLER, Jan. Tygři na cestě, 2025. Dostupné z: <a href="https://youtu.be/TkkWsrefH8A?feature=shared">https://youtu.be/TkkWsrefH8A?feature=shared</a>. [cit. 2025-04-24].
+*Časová dotace: 10–15 minut | Úvodní úloha*
 
-Pro zajímavost se ještě podívejte na zkratky:
--   SoC - System on a chip
--   DSP - Digital signal processor
--   FPGA - Field-programmable gate array 
+Doplňte do níže uvedené tabulky význam zkratek, základní princip a typický příklad reálného nasazení nebo zástupce:
 
-2. Co je za parametr (vlastnost) výpočetní výkon? Jaké jiné parametry mají na něj vliv? A jak se dá měřit?
+| Zkratka / Pojem          | Co zkratka znamená (česky/anglicky) | Základní charakteristika (architektura, kde běží program)                                 | Typický zástupce                  | Příklad nasazení                           |
+| :----------------------- | :---------------------------------- | :---------------------------------------------------------------------------------------- | :-------------------------------- | ------------------------------------------ |
+| **MCU**                  |                                     | Integrovaný čip (CPU + RAM + Flash na jednom křemíku), deterministický běh bez OS / RTOS  | např. ESP32, PIC16LF1xxx, RP2040  |                                            |
+| **MPU**                  |                                     | Samostatný procesor vyžadující externí RAM a úložiště, často běží plnohodnotný OS (Linux) |                                   |                                            |
+| **Embedded**             |                                     |                                                                                           | Embedded PLC, embedded PC         | Bílá technika, bankomaty, plynové kotle... |
+| **PLC**                  |                                     | Průmyslový automat pro cyklické řízení procesů, vysoká odolnost, modulární/kompaktní      |                                   |                                            |
+| **iPC**                  |                                     |                                                                                           |                                   |                                            |
+| **Programovatelné relé** |                                     | Zjednodušené malé PLC pro méně náročné úlohy (nahrazuje časovače a relé)                  | např. Siemens LOGO!, Eaton easyE4 |                                            |
 
-<details>
-    <summary> :bulb: Tip: </summary>
-        <p>Podívejte se, co to jsou benchmarky a k čemu se používají? </p>
-        <p>A co je ekvivalent benchmarků pro mikrořadiče? </p>
-</details>
-
-3. Porovnejte dle výpočetního výkonu MPU a MCU. Podívejte se i na vybavenost integrovanými periferiemi. A vymyslete, proč se stále MCU vyrábí a používají.
-
-4. Podobně porovnejte PLC, iPC a NC. Proč se vyrabí různě výkonná PLC (často se pak rozdělují na malá, střední a velká)? A jaký vliv má výpočetní výkon na použití těchto řídících jednotek?
+> :key: **Vysvětlení pojmů a odborné zdroje:**
+> - **SoC (System on Chip):** Čip integrující CPU, GPU, paměť i bezdrátové moduly (např. Wi-Fi/BT) na jediném substrátu (např. v telefonech, ESP32).
+> - **DSP (Digital Signal Processor):** Specializovaný procesor s architekturou optimalizovanou pro bleskové matematické operace (filtrace zvuku, FFT, řízení motorů).
+> - **FPGA (Field-Programmable Gate Array):** Programovatelné hradlové pole umožňující vytvořit libovolný digitální obvod přímo na hardwarové úrovni s nulovou programovou latencí.
+> Programovatelné hradlové pole. In: _Wikipedia: otevřená encyklopedie_ [online]. St. Petersburg (Florida): Wikimedia Foundation, 2005, poslední editace 10. 1. 2024 [cit. 2026-09-14]. Dostupné z: [https://cs.wikipedia.org/wiki/Programovateln%C3%A9_hradlov%C3%A9_pole](https://cs.wikipedia.org/wiki/Programovateln%C3%A9_hradlov%C3%A9_pole)
+> Systém na čipu. In: _Wikipedia: otevřená encyklopedie_ [online]. St. Petersburg (Florida): Wikimedia Foundation, 2007, poslední editace 7. 6. 2024 [cit. 2026-09-14]. Dostupné z: [https://cs.wikipedia.org/wiki/Syst%C3%A9m_na_%C4%8Dipu](https://cs.wikipedia.org/wiki/Syst%C3%A9m_na_%C4%8Dipu)
+>Digitální signálový procesor. In: _Wikipedia: otevřená encyklopedie_ [online]. St. Petersburg (Florida): Wikimedia Foundation, 2006, poslední editace 28. 2. 2026 [cit. 2026-09-14]. Dostupné z: [https://cs.wikipedia.org/wiki/Digit%C3%A1ln%C3%AD_sign%C3%A1lov%C3%BD_procesor](https://cs.wikipedia.org/wiki/Digit%C3%A1ln%C3%AD_sign%C3%A1lov%C3%BD_procesor)
 
 <details>
-    <summary> :bulb: Tip: </summary>
-        <p>PLC se často navíc rozdělují podle výpočetního výkonu na malá/mini, též někdy jako programovatelná relé. Středně výkonná a velmi výkonná. Další hledisko je pak rozdělení na modulární a kompaktní. To do značné míry předurčuje, kde se dané PLC používá. Rozdělení a určení však není striktní, jde tedy spíše o získání představy, k čemu použít jakou řídící jednotku. </p>
+<summary> :bulb: Tip k doplnění tabulky: </summary>
+<p>Uvědomte si zásadní rozdíl: U MCU je program nahrán přímo ve vnitřní paměti Flash procesoru a startuje okamžitě po zapnutí (desítky milisekund). U MPU a iPC systém nejprve zavádí operační systém z disku/SD karty do paměti RAM (sekundy až desítky sekund).</p>
 </details>
 
-5. Podívejte se, jaké typy pamětí se používají ve výše uvedených řídících jednotkách. Na jakém principu jsou založeny a k čemu se používají?
+:star2: **Bonusová otázka k úloze 1:**
 
-### 2. Rozdělení řídících jednotek z hlediska odolnosti a robustnosti
+Proč se u bezpečnostních aplikací v letectví nebo jaderné energetice stále upřednostňují jednoduché mikrořadiče nebo FPGA před moderními vícejádrovými procesory s gigabajty RAM?
 
-1. Odolnost řídících jednotek můžeme hodnotit jednak z hlediska mechanických vlastností a jednak z hlediska funkčnosti a stability vykonávání zadaných úloh (zpracování programu). S tím souvisí i pojem robustnost. Zjistěte, co tento pojem znamená.
+*Vaše odpověď:*
 
-2. Jakými způsoby lze zajistit vyšší odolnost řídících jednotek proti prachu, vodě, chemikáliím a vibracím?
+`...`
 
-3. Co je to IP68?
+---
 
-4. Jakou hodnotu musí minimálně mít zařízení pro montáž ven pod střechu?
+### 2. Parametry, paměti a provozní odolnost (IP krytí)
+*Časová dotace: max. 15 minut | Úvodní úloha
 
-5. Jak se ve výše diskutovaných požadavcích liší od sebe výpočetní technika pro běžné uživatele, řídící jednotky pro průmysl, zdravotnictví a armádu?
+1. **Typy pamětí:**
+   - Jaký je zásadní rozdíl mezi pamětí **RAM**, **Flash** a **EEPROM** v mikrokontroléru/PLC z hlediska uchování dat po odpojení napájení a rychlosti zápisu?
+2. **Reálný čas a determinismus:**
+   - Proč pro řízení rychlého technologického děje (např. reakce na nouzové zastavení do 5 ms) použijeme spíše **MCU / PLC** než běžný operační systém na **MPU** (např. Raspberry Pi s OS Linux)?
+3. **Odolnost a IP krytí:**
+   - Dešifrujte označení **IP68** (co přesně znamená první číslice 6 a druhá číslice 8).
+   - Jaké minimální krytí IP musí mít zařízení určené pro instalaci venku pod přístřeškem, kde hrozí stříkající voda a prach?
+   - Jak se liší konstrukce běžného kancelářského PC od **průmyslového PC (iPC)** (např. z hlediska chlazení, napájení, vibrací a konektorů)?
 
-
-
-<!--
-
-> :key: **xxxx**
->
-> xxxx
-
--->
-
+---
