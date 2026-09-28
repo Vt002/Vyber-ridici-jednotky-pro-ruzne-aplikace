@@ -139,7 +139,7 @@ Co označuje doplňkové písmeno **K** v kódu krytí **IP69K** a v jakém prů
 
 ### 3. Rozhodovací matice platforem (MCU vs. PLC vs. iPC) 
 
-*Časová dotace: 20–25 minut | :star: Klasifikovaná inženýrská úloha na známky*
+*Časová dotace: 20–25 minut | :bangbang: Klasifikovaná inženýrská úloha na známky*
 
 Jste v pozici nezávislého konzultanta automatizace. Tři různí zákazníci požadují navrhnout optimální kategorii řízení.
 
@@ -187,7 +187,7 @@ Co je to tzv. **SoftPLC** a jak umožňuje průmyslovému PC (iPC) kombinovat v�
 
 ### 4. Návrh a konfigurace řídicí jednotky pro čerpací stanici
 
-*Časová dotace: 25–30 minut | :star: Klasifikovaná inženýrská úloha na známky*
+*Časová dotace: 25–30 minut | :bangbang: Klasifikovaná inženýrská úloha na známky*
 
 Jste v roli projektanta automatizace. Zákazník poptává zhotovení řízení pro obecní přečerpávací stanici odpadních vod.
 
@@ -263,7 +263,7 @@ Proč se u čerpadel v čistírnách odpadních vod a jímkách striktně upřed
 
 ### 5. Technický audit a oponentura nevhodného návrhu
 
-*Časová dotace: 20–25 minut | :star: Klasifikovaná inženýrská úloha na známky*
+*Časová dotace: 20–25 minut | :bangbang: Klasifikovaná inženýrská úloha na známky*
 
 Jako vedoucí inženýr jste převzal projekt po nezkušeném brigádníkovi, který navrhl řízení automatizovaného tvářecího a lisovacího stroje v prašné kovářské dílně následovně:
 - **Řídicí deska:** Běžná vývojová deska **Arduino Uno (Rev3)** s mikrokontrolérem ATmega328P.
